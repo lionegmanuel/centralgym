@@ -210,6 +210,10 @@ nav a:hover {
   transition: 0.3s;
 }
 
+#centralContainer {
+  background: linear-gradient(#5a5050, #1e1e1e);
+}
+
 #pictureSection {
   display: inline-flex;
   flex-wrap: nowrap;
@@ -220,18 +224,42 @@ nav a:hover {
 
 .picture1 {
   width: 60%;
-  max-height: 600px;
+  max-height: inherit;
 
 }
 
-
-
-.picture2 {
-  width: 40%;
-  max-height: 500px;
-
+.picture1 .img {
+  margin: 40px 40px;
 }
 
+.about {
+  width: auto;
+  padding: 10px;
+  height: inherit;
+}
+
+.aboutWe {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.aboutWe .we {
+  color: #9d0202;
+  font-style: oblique;
+}
+
+.about p {
+  margin: 15px 20px;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 40px;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 /* Estilos para el pie de página */
 footer {
