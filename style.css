@@ -238,8 +238,9 @@ nav a:hover {
 
 }
 
-.picture1 .img {
+.picture1 img {
   margin: 40px 40px;
+  border-radius: 50px;
 }
 
 .about {
@@ -276,7 +277,7 @@ nav a:hover {
   grid-template-rows: 650px 650px;
   grid-template-columns: 1fr 1fr;
   width: 80%;
-  padding: 20px;
+  padding: 40px;
   margin: 15px auto;
 
 }
@@ -285,7 +286,7 @@ nav a:hover {
   width: auto;
   border: solid 5px #fff;
   margin: 30px;
-  padding: 40px;
+  padding: 10px 25px;
   text-align: justify;
 }
 
@@ -340,6 +341,7 @@ nav a:hover {
 
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 textarea {
   width: 100%;
   padding: 10px;
@@ -358,6 +360,7 @@ textarea {
 
 input[type="text"]:hover,
 input[type="email"]:hover,
+input[type="tel"]:hover,
 textarea:hover {
   background: hsl(0, 100%, 94%);
   transition: 0.3s;
@@ -372,12 +375,21 @@ input[type="submit"] {
   cursor: pointer;
   float: right;
   font-size: 15px;
-
+  margin: 0;
 }
 
 input[type="submit"]:hover {
   background-color: #37823b;
 
+}
+
+.subtittleSection {
+  font-size: 20px;
+  margin: 80px auto 20px auto;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 25px;
+  text-align: center;
 }
 
 .social {
@@ -417,10 +429,53 @@ input[type="submit"]:hover {
   content: "\f167";
 }
 
-.subtittleSection {
-  font-size: 20px;
-  margin: 30px auto;
-  color: #fff;
+.socialLogotype {
+  height: 50px;
+  width: 50px;
+}
+
+/*seccion de entrenadores*/
+#trainers {
+  display: flex;
+  flex-flow: column;
+  width: 70%;
+  padding: 40px;
+  margin: 20px auto;
+}
+
+.trainerItem {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid #fff;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.trainerItem img {
+  height: 300px;
+  width: 300px;
+}
+
+.trainerItem .sectionTittle {
+  margin: auto 30px;
+  text-align: center;
+}
+
+#galery {
+  display: grid;
+  grid-template-rows: 350px 350px;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: auto;
+  padding: 20px;
+  margin: 60px auto 200px auto;
+  grid-gap: 100px;
+}
+
+#galery img {
+  margin: 20px auto;
+  height: 450px;
+  width: 450px;
+  border-radius: 60px;
 }
 
 /* Estilos para el pie de página */
@@ -431,3 +486,103 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+
+/*media quieries */
+@media screen and (max-width:1400px) {
+  .picture1 {
+    width: 60%;
+    max-height: inherit;
+
+  }
+
+  .picture1 img {
+    margin: 25px 25px;
+    height: 550px;
+    width: 650px;
+  }
+
+  .serviceItem {
+    height: fit-content;
+  }
+
+  .sectionTittle {
+    font-size: 50px;
+  }
+
+  .about p {
+    font-size: 20px;
+  }
+
+  #servicesSection {
+    grid-template-rows: 600px 600px;
+  }
+
+  .serviceDescription {
+    font-size: 20px;
+    word-spacing: 2px;
+    line-height: 35px;
+  }
+
+  #galery {
+    display: grid;
+    grid-template-rows: 350px 350px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: fit-content;
+    padding: 20px;
+    margin: 30px auto 150px auto;
+    grid-gap: 100px;
+  }
+
+  #galery img {
+    margin: 15px 0;
+    height: 360px;
+    width: 360px;
+    border-radius: 60px;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .picture1 {
+    width: 60%;
+    max-height: inherit;
+
+  }
+
+  .picture1 img {
+    margin: 25px 25px;
+    height: 480px;
+    width: 550px;
+  }
+
+  .about p {
+    font-size: 15px;
+  }
+
+  #servicesSection {
+    grid-template-rows: 500px 500px;
+    height: auto;
+  }
+
+  .serviceItem .serviceDescription {
+    font-size: 20px;
+    word-spacing: 2px;
+    line-height: 30px;
+  }
+
+
+  .consultButton {
+    padding: 8px;
+    font-size: 12px;
+    margin: 8px auto;
+  }
+
+}
+
+@media screen and (max-width:970px) {}
+
+@media screen and (max-width: 800px) {}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (max-width: 470px) {}
