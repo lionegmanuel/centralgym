@@ -280,7 +280,6 @@ nav a:hover {
 
 .serviceItem {
   width: auto;
-  border: solid 5px #fff;
   margin: 30px;
   padding: 10px 25px;
   text-align: justify;
@@ -449,7 +448,6 @@ input[type="submit"]:hover {
 .trainerItem {
   display: flex;
   flex-direction: row;
-  border: 3px solid #fff;
   margin: 20px auto;
   padding: 10px;
 }
@@ -626,6 +624,21 @@ footer {
 }
 
 @media (max-width: 800px) {
+
+  .about p,
+  .serviceDescription {
+    font-size: 20px;
+  }
+
+  .picture1 img {
+    height: 360px;
+    width: 360px;
+  }
+
+  .logotype {
+    width: auto;
+  }
+
   #servicesSection {
     grid-template-columns: 1fr;
     margin: 0 20px;
@@ -641,12 +654,15 @@ footer {
   }
 
   #galery {
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 90%;
+    grid-gap: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   header {
     flex-direction: column;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
 
   .headerGym {
@@ -657,5 +673,74 @@ footer {
   nav ul {
     display: inline-flex;
 
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 15px;
+  }
+
+
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 120px;
+    margin-bottom: 50px;
+  }
+
+  .headerGym {
+    height: 60%;
+  }
+
+  .picture1 img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+
+  .serviceItem {
+    padding: 0;
+  }
+
+  nav ul {
+    display: grid;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    font-size: 17px;
+  }
+
+  #galery img {
+    margin: 10px auto;
+  }
+
+  footer p {
+    font-size: 15px;
+  }
+
+  #contactForm {
+    max-width: 400px;
+  }
+
+  .sectionTittle {
+    font-size: 28px;
+  }
+
+  .trainerItem .sectionTittle .highlighted {
+    font-size: 25px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  #contactForm {
+    max-width: 300px;
   }
 }
