@@ -238,7 +238,7 @@ nav a:hover {
 }
 
 .picture1 img {
-  margin: 40px 40px;
+  margin: 30px 25px;
   border-radius: 50px;
 }
 
@@ -435,12 +435,17 @@ input[type="submit"]:hover {
   width: 50px;
 }
 
+.socialLogotype:hover {
+  transform: scale (1.2);
+  transition: 0.3s;
+}
+
 /*seccion de entrenadores*/
 #trainers {
   display: flex;
   flex-flow: column;
   width: fit-content;
-  padding: 40px;
+  padding: 20px;
   margin: 20px auto;
   justify-content: center;
 }
@@ -493,13 +498,8 @@ footer {
 
 /*media quieries */
 @media (max-width:1400px) {
-  .picture1 {
-    width: 60%;
-
-  }
 
   .picture1 img {
-    margin: 25px 25px;
     height: 550px;
     width: 650px;
   }
@@ -511,17 +511,6 @@ footer {
   .sectionTittle {
     font-size: 50px;
   }
-
-  .about p {
-    font-size: 15px;
-  }
-
-  .serviceDescription {
-    font-size: 20px;
-    word-spacing: 2px;
-    line-height: 35px;
-  }
-
 
   #galery img {
     margin: 15px 0;
@@ -537,16 +526,11 @@ footer {
   }
 
   .picture1 img {
-    margin: 25px 25px;
     height: 480px;
     width: 480px;
   }
 
-  .about p {
-    font-size: 15px;
-  }
-
-  .serviceItem .serviceDescription {
+  .serviceItem {
     font-size: 20px;
     word-spacing: 2px;
     line-height: 30px;
@@ -574,7 +558,65 @@ footer {
 }
 
 @media (max-width: 970px) {
-  .about p {
-    font-size: 10px;
+
+  #pictureSection {
+    flex-flow: column-reverse;
+  }
+
+  .picture1 {
+    width: auto;
+    margin: auto;
+  }
+
+  .picture1 img {
+    height: 400px;
+    width: 400px;
+  }
+
+  .about {
+    width: fit-content;
+    text-align: justify;
+  }
+
+  .sectionTittle {
+    font-size: 32px;
+  }
+
+  .serviceItem {
+    margin: 0;
+  }
+
+  .serviceDescription {
+    text-align: center;
+  }
+
+  #galery {
+    grid-template-columns: 50% 50%;
+  }
+
+  #galery img {
+    margin: auto;
+  }
+
+
+}
+
+@media (max-width: 800px) {
+  #servicesSection {
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+  }
+
+  .trainerItem {
+    flex-flow: column-reverse;
+    margin: 0 auto 15px auto;
+  }
+
+  .trainerItem .sectionTittle .highlighted {
+    font-size: 35px;
+  }
+
+  #galery {
+    grid-template-columns: 40% 40%;
   }
 }
