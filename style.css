@@ -197,10 +197,6 @@ nav ul {
   font-weight: bold;
 }
 
-.itemNav:last-child {
-  margin-right: 0;
-}
-
 .itemNav:hover {
   transform: scale(1.2);
   transition: 0.3s;
@@ -555,6 +551,17 @@ footer {
     font-size: 40px;
   }
 
+  nav ul {
+    display: inline-flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-left: 2px;
+  }
+
+  .itemNav:first-child {
+    margin-left: 0;
+  }
+
 }
 
 @media (max-width: 970px) {
@@ -598,6 +605,23 @@ footer {
     margin: auto;
   }
 
+  nav ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .itemNav {
+    text-align: center;
+    line-height: 30px;
+  }
+
+  nav a {
+    margin: 15px;
+  }
+
 
 }
 
@@ -618,5 +642,20 @@ footer {
 
   #galery {
     grid-template-columns: 40% 40%;
+  }
+
+  header {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  .headerGym {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav ul {
+    display: inline-flex;
+
   }
 }
