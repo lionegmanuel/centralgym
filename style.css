@@ -1,4 +1,4 @@
-/* RESET CSS
+/* reset CSS
 */
 
 html,
@@ -106,7 +106,6 @@ section {
 }
 
 body {
-  min-width: 400px;
   line-height: 1;
 }
 
@@ -133,614 +132,73 @@ table {
   border-spacing: 0;
 }
 
-/* CSS SITIO WEB
-*/
+/*-------------------------*/
+html,
 body {
-  background: linear-gradient(#5a5050, #1e1e1e);
+  height: 100%;
+  max-width: 1920px;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
+
+/*encabezado*/
+header #header {
   display: flex;
-  flex-flow: row;
-  height: 80px;
-  width: auto;
+  flex-direction: column;
+  height: 250px;
+  background-color: #000;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#info {
+  display: inline-flex;
+  width: 100%;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+#info p {
+  margin: 15px 25px
+}
+
+#navBar {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-
 }
 
-.headerGym {
-  display: flex;
-  flex-direction: row;
-  background-color: #a41600a7;
-  color: #fff;
-  height: inherit;
-  width: fit-content;
+#logotype {
+  width: 40%;
 }
 
-.tittleGym {
-  font-size: 30px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-style: oblique;
-  margin: auto 40px auto 10px;
-  width: max-content;
-
-
-}
-
-.logotype {
-  max-height: 100px;
-  width: fit-content;
-  margin: 0 0 0 10px;
-
-}
-
-/* Estilos para el menú de navegación */
-nav {
-  background-color: #ddd;
-  width: 100%;
-  height: inherit;
-}
-
-nav ul {
-  list-style: none;
-  width: 100%;
-  margin: 30px -20px;
-  padding: 0;
-  text-align: right;
-}
-
-.itemNav {
-  display: inline-block;
-  margin-right: 20px;
-  font-size: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: bold;
-}
-
-.itemNav:hover {
-  transform: scale(1.2);
-  transition: 0.3s;
-}
-
-nav a {
-  color: #1e1e1e;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #9d0202;
-  text-decoration: none;
-  transform: scale(1.2);
-  transition: 0.3s;
-}
-
-#centralContainer {
-
-  height: max-content;
-}
-
-#pictureSection {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  width: 100%;
-
-}
-
-.picture1 {
+#bar {
   width: 60%;
-  max-height: inherit;
-
 }
 
-.picture1 img {
-  margin: 30px 25px;
-  border-radius: 50px;
-}
-
-.about {
-  width: auto;
-  padding: 10px;
-  height: inherit;
-}
-
-.sectionTittle {
-  font-size: 60px;
-  font-weight: bold;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.highlighted {
-  color: #9d0202;
-  font-style: oblique;
-}
-
-.about p {
-  margin: 15px 20px;
-  color: #ffffff;
+#bar ul {
+  display: inline-flex;
+  text-decoration: none;
   font-size: 25px;
-  line-height: 40px;
-  justify-content: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#servicesSection {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 50% 50%;
-  grid-gap: 30px;
-  padding: 40px;
-  margin: 0 auto;
-  justify-content: center;
-
-}
-
-.serviceItem {
-  width: auto;
-  margin: 30px;
-  padding: 10px 25px;
-  text-align: justify;
-  height: fit-content;
-}
-
-.serviceItem:hover {
-  transform: scale(1.1);
-  transition: 0.7s;
-}
-
-.serviceDescription {
-  font-size: 25px;
-  color: hsl(0, 100%, 94%);
-  word-spacing: 3px;
-  line-height: 40px;
-}
-
-.consultButton {
-  background: #9d0202;
-  padding: 10px;
-  font-size: 15px;
   font-weight: bold;
-  color: #fff;
-  margin: 10px auto;
-  text-align: center;
-  cursor: pointer;
-
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 0px;
 }
 
-.consultButton:hover {
-
-  transform: scale(1.1);
-  transition: 0.3s;
+#bar ul li {
+  margin: auto 20px;
 }
 
-/*Zona de formulario*/
-#contact {
-  margin: 30px auto;
-
-}
-
-#contactForm {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.labelForm {
-  font-size: 20px;
-  display: block;
-  font-weight: bold;
-  margin-top: 20px;
-  color: #fff;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 3px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  resize: vertical;
-  font-size: 20px;
-}
-
-textarea {
-  height: 400px;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="tel"]:hover,
-textarea:hover {
-  background: hsl(0, 100%, 94%);
-  transition: 0.3s;
-}
-
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  float: right;
-  font-size: 15px;
-  margin: 0;
-}
-
-input[type="submit"]:hover {
-  background-color: #37823b;
-
-}
-
-.subtittleSection {
-  font-size: 20px;
-  margin: 80px auto 20px auto;
-  color: #fff;
-  letter-spacing: 3px;
-  line-height: 25px;
-  text-align: center;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.social a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #fff;
-  font-size: 24px;
-}
-
-.social a:hover {
-  color: #0077B5;
-}
-
-.fa-facebook-f:before {
-  content: "\f09a";
-}
-
-.fa-twitter:before {
-  content: "\f099";
-}
-
-.fa-instagram:before {
-  content: "\f16d";
-}
-
-.fa-linkedin-in:before {
-  content: "\f0e1";
-}
-
-.fa-youtube:before {
-  content: "\f167";
-}
-
-.socialLogotype {
-  height: 50px;
-  width: 50px;
-}
-
-.socialLogotype:hover {
-  transform: scale (1.2);
-  transition: 0.3s;
-}
-
-/*seccion de entrenadores*/
-#trainers {
-  display: flex;
-  flex-flow: column;
-  width: fit-content;
-  padding: 20px;
-  margin: 20px auto;
-  justify-content: center;
-}
-
-.trainerItem {
-  display: flex;
-  flex-direction: row;
-  margin: 20px auto;
-  padding: 10px;
-}
-
-.trainerItem img {
-  height: 300px;
-  width: 300px;
-}
-
-.trainerItem .sectionTittle {
-  margin: auto 30px;
-  text-align: center;
-}
-
-#galery {
-  display: grid;
-  grid-template-rows: 350px 350px;
-  grid-template-columns: 20% 20% 20%;
-  width: auto;
-  padding: 20px;
-  margin: 60px auto 200px auto;
-  grid-gap: 100px;
-  justify-content: center;
-}
-
-#galery img {
-  margin: 20px auto;
-  height: 400px;
-  width: auto;
-  border-radius: 60px;
-}
-
-/* Estilos para el pie de página */
-footer {
-  width: auto;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-
-/*media quieries */
-@media (max-width:1400px) {
-
-  .picture1 img {
-    height: 550px;
-    width: 650px;
-  }
-
-  .serviceItem {
-    height: fit-content;
-  }
-
-  .sectionTittle {
-    font-size: 50px;
-  }
-
-  #galery img {
-    margin: 15px 0;
-    height: 350px;
-    width: auto;
-
-  }
-}
-
-@media(max-width:1280px) {
-  .sectionTittle {
-    font-size: 40px;
-  }
-
-  .picture1 img {
-    height: 480px;
-    width: 480px;
-  }
-
-  .serviceItem {
-    font-size: 20px;
-    word-spacing: 2px;
-    line-height: 30px;
-  }
-
-  #galery img {
-    height: 300px;
-  }
-
-  .consultButton {
-    padding: 8px;
-    font-size: 12px;
-    margin: 8px auto;
-  }
-
-  .trainerItem img {
-    height: 200px;
-    width: 200px;
-  }
-
-  .trainerItem .highlighted {
-    font-size: 40px;
-  }
-
-  nav ul {
-    display: inline-flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    margin-left: 2px;
-  }
-
-  .itemNav:first-child {
-    margin-left: 0;
-  }
-
-}
-
-@media (max-width: 970px) {
-
-  #pictureSection {
-    flex-flow: column-reverse;
-  }
-
-  .picture1 {
-    width: auto;
-    margin: auto;
-  }
-
-  .picture1 img {
-    height: 400px;
-    width: 400px;
-  }
-
-  .about {
-    width: fit-content;
-    text-align: justify;
-  }
-
-  .sectionTittle {
-    font-size: 32px;
-  }
-
-  .serviceItem {
-    margin: 0;
-  }
-
-  .serviceDescription {
-    text-align: center;
-  }
-
-  #galery {
-    grid-template-columns: 50% 50%;
-  }
-
-  #galery img {
-    margin: auto;
-  }
-
-  nav ul {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    margin: 10px 0;
-  }
-
-  .itemNav {
-    text-align: center;
-    line-height: 30px;
-  }
-
-  nav a {
-    margin: 15px;
-  }
-
-
-}
-
-@media (max-width: 800px) {
-
-  .about p,
-  .serviceDescription {
-    font-size: 20px;
-  }
-
-  .picture1 img {
-    height: 360px;
-    width: 360px;
-  }
-
-  .logotype {
-    width: auto;
-  }
-
-  #servicesSection {
-    grid-template-columns: 1fr;
-    margin: 0 20px;
-  }
-
-  .trainerItem {
-    flex-flow: column-reverse;
-    margin: 0 auto 15px auto;
-  }
-
-  .trainerItem .sectionTittle .highlighted {
-    font-size: 35px;
-  }
-
-  #galery {
-    grid-template-columns: 90%;
-    grid-gap: 10px;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-
-  header {
-    flex-direction: column;
-    margin-bottom: 120px;
-  }
-
-  .headerGym {
-    width: 100%;
-    justify-content: center;
-  }
-
-  nav ul {
-    display: inline-flex;
-
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    font-size: 15px;
-  }
-
-
-}
-
-@media (max-width: 600px) {
-  header {
-    height: 120px;
-    margin-bottom: 50px;
-  }
-
-  .headerGym {
-    height: 60%;
-  }
-
-  .picture1 img {
-    height: 300px;
-    width: 300px;
-  }
-
-  .about p {
-    font-size: 16px;
-  }
-
-  .serviceItem {
-    padding: 0;
-  }
-
-  nav ul {
-    display: grid;
-    justify-content: center;
-  }
-
-  nav ul li a {
-    font-size: 17px;
-  }
-
-  #galery img {
-    margin: 10px auto;
-  }
-
-  footer p {
-    font-size: 15px;
-  }
-
-  #contactForm {
-    max-width: 400px;
-  }
-
-  .sectionTittle {
-    font-size: 28px;
-  }
-
-  .trainerItem .sectionTittle .highlighted {
-    font-size: 25px;
-  }
-
-}
-
-@media (max-width: 500px) {
-  #contactForm {
-    max-width: 300px;
-  }
+#logotype .logo {
+  width: 150px;
+  height: 150px;
+  margin: 10px 50px;
+  background-color: #fff;
+  border-radius: 10px;
 }
