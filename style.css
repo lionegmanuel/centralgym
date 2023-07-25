@@ -136,15 +136,19 @@ table {
 html,
 body {
   height: 100%;
-  max-width: 1920px;
-  margin: auto;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to bottom, #B61601, #FF0000, #FF4040);
 }
 
 
 /*encabezado*/
+header {
+  background-color: #000;
+}
+
 header #header {
   display: flex;
+  max-width: 1440px;
   flex-direction: column;
   height: 250px;
   background-color: #000;
@@ -152,6 +156,7 @@ header #header {
   font-size: 40px;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: auto;
 }
 
 #info {
@@ -165,7 +170,7 @@ header #header {
 }
 
 #info p {
-  margin: 15px 25px
+  margin: 15px 25px;
 }
 
 #navBar {
@@ -185,14 +190,16 @@ header #header {
 #bar ul {
   display: inline-flex;
   text-decoration: none;
-  font-size: 25px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+
   margin-right: 0px;
 }
 
 #bar ul li {
+  font-size: 18px;
+  font-weight: 100;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: auto 20px;
+  display: inline-block;
 }
 
 #logotype .logo {
@@ -201,4 +208,76 @@ header #header {
   margin: 10px 50px;
   background-color: #fff;
   border-radius: 10px;
+}
+
+#background {
+  height: fit-content;
+  text-align: center;
+}
+
+.backgroundImage {
+  display: inline-flex;
+}
+
+.backgroundImage img {
+  height: 600px;
+  border-radius: 30px;
+}
+
+
+.backgroundImage .tittle {
+  width: auto;
+  margin: auto 50px;
+  justify-content: center;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 40px;
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+main {
+  background-color: #000;
+  height: 700px;
+}
+
+main #services {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+#services .service {
+  margin: 50px auto;
+}
+
+#services .service .serviceTittle {
+  color: #fff;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#services .service .serviceDescription {
+  color: #fff;
+  margin: 20px 120px;
+  padding: 22px;
+  border: 1px solid rgba(255, 127, 80, 0.5);
+  border-radius: 40px;
+}
+
+#services .service .serviceDescription p {
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 1.5;
+
+}
+
+#services .service hr {
+  border: none;
+  height: 10px;
+  background-color: coral;
+  width: 30%;
+  border-radius: 10px;
+  margin: 40px auto;
 }
