@@ -137,7 +137,7 @@ html,
 body {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(to bottom, #B61601, #FF0000, #FF4040);
+  background-color: #ff7f7f;
 }
 
 
@@ -150,7 +150,6 @@ header #header {
   display: flex;
   max-width: 1440px;
   flex-direction: column;
-  height: 250px;
   background-color: #000;
   color: #fff;
   font-size: 40px;
@@ -177,10 +176,19 @@ header #header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 #logotype {
   width: 40%;
+}
+
+#logotype .logo {
+  width: 100px;
+  height: 100px;
+  margin: 10px 50px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 #bar {
@@ -190,7 +198,6 @@ header #header {
 #bar ul {
   display: inline-flex;
   text-decoration: none;
-
   margin-right: 0px;
 }
 
@@ -202,17 +209,12 @@ header #header {
   display: inline-block;
 }
 
-#logotype .logo {
-  width: 150px;
-  height: 150px;
-  margin: 10px 50px;
-  background-color: #fff;
-  border-radius: 10px;
-}
+
 
 #background {
   height: fit-content;
   text-align: center;
+  margin-bottom: -5px;
 }
 
 .backgroundImage {
@@ -221,11 +223,11 @@ header #header {
 
 .backgroundImage img {
   height: 600px;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 
-.backgroundImage .tittle {
+#background .backgroundImage .tittle {
   width: auto;
   margin: auto 50px;
   justify-content: center;
@@ -234,6 +236,7 @@ header #header {
   font-size: 40px;
   font-style: italic;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #000;
 }
 
 
@@ -248,17 +251,17 @@ main #services {
   text-align: center;
 }
 
-#services .service {
+#services .description {
   margin: 50px auto;
 }
 
-#services .service .serviceTittle {
+.tittle {
   color: #fff;
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#services .service .serviceDescription {
+#services .description .infoDescription {
   color: #fff;
   margin: 20px 120px;
   padding: 22px;
@@ -266,18 +269,97 @@ main #services {
   border-radius: 40px;
 }
 
-#services .service .serviceDescription p {
-  font-size: 27px;
-  font-weight: 200;
-  line-height: 1.5;
+#services .description .infoDescription p {
+  font-size: 20px;
+  font-weight: 120;
+  line-height: 1.7;
 
 }
 
-#services .service hr {
+#services .description hr {
   border: none;
   height: 10px;
   background-color: coral;
   width: 30%;
   border-radius: 10px;
   margin: 40px auto;
+}
+
+#about {
+  background-color: #ff7f7f;
+  height: fit-content;
+  margin: auto auto 60px auto;
+}
+
+#about #aboutGym {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  align-items: center;
+}
+
+#about .tittle {
+  text-align: center;
+  color: #000;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 60px 50px 20px 100px;
+  text-align: left;
+
+}
+
+#about .infoDescription {
+  font-size: 25px;
+  padding: 0 100px;
+  text-align: justify;
+}
+
+#about #aboutGym .backgroundImage {
+  margin: auto;
+}
+
+#about #aboutGym .backgroundImage img {
+  width: 600px;
+  height: fit-content;
+}
+
+#schedules {
+  height: 500px;
+  background-color: #000;
+}
+
+#schedules2 {
+  max-width: 1440px;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+
+#schedules2 table {
+  color: #fff;
+  margin: 30px auto;
+  line-height: 2.2;
+}
+
+#schedules table th,
+#schedules table td {
+  border: 1px solid #fff;
+  padding: 8px;
+}
+
+#schedules table tr th {
+  text-align: center;
+  margin: auto 20px;
+
+  background-color: #f2f2f2;
+  /* Fondo gris claro para las celdas de encabezado */
+  font-size: 16px;
+  /* Tamaño de fuente de 16px para los encabezados */
+
+}
+
+#schedules table tr td {
+  text-align: left;
 }
