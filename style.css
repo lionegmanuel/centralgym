@@ -325,7 +325,7 @@ main #services {
 }
 
 #schedules {
-  height: 500px;
+  height: fit-content;
   background-color: #000;
 }
 
@@ -349,17 +349,24 @@ main #services {
   padding: 8px;
 }
 
+#schedules table tr {
+  color: #000;
+  font-weight: bold;
+  font-style: italic;
+}
+
 #schedules table tr th {
   text-align: center;
   margin: auto 20px;
 
   background-color: #f2f2f2;
   /* Fondo gris claro para las celdas de encabezado */
-  font-size: 16px;
+  font-size: 22px;
   /* Tamaño de fuente de 16px para los encabezados */
 
 }
 
 #schedules table tr td {
   text-align: left;
+  color: #fff;
 }
