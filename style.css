@@ -172,6 +172,22 @@ header #header {
   margin: 15px 25px;
 }
 
+#info ul {
+  display: inline-flex;
+  text-decoration: none;
+  margin: 15px 0 auto auto;
+}
+
+#info ul li {
+  margin-right: 20px;
+}
+
+#info ul li img {
+  width: 30px;
+  height: fit-content;
+  border-radius: 10px;
+}
+
 #navBar {
   display: flex;
   flex-direction: row;
@@ -189,6 +205,15 @@ header #header {
   margin: 10px 50px;
   background-color: #fff;
   border-radius: 10px;
+}
+
+#logotype .logo:hover {
+  transform: scale(1.2);
+  transition: 300ms;
+}
+
+#logotype .loho:not(:hover) {
+  transform: scale(1);
 }
 
 #bar {
@@ -209,7 +234,14 @@ header #header {
   display: inline-block;
 }
 
+#bar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
 
+#bar ul li a:hover {
+  color: coral;
+}
 
 #background {
   height: fit-content;
@@ -259,6 +291,7 @@ main #services {
   color: #fff;
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top: 30px;
 }
 
 #services .description .infoDescription {
@@ -324,49 +357,53 @@ main #services {
   height: fit-content;
 }
 
-#schedules {
+#prices-schedules {
   height: fit-content;
   background-color: #000;
 }
 
-#schedules2 {
+#prices-schedules table th,
+#prices-schedules table td {
+  border: 2px solid #ff7f7f;
+  padding: 8px;
+  border-radius: 8px;
+  border-width: 2px;
+}
+
+#prices-schedules table tr {
+  color: #000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#prices-schedules table tr th:first-child {
+  text-align: left;
+  padding: 20px;
+}
+
+#prices-schedules table tr th {
+  text-align: center;
+  margin: auto 20px;
+  background-color: #ffe1e1;
+  font-size: 28px;
+
+}
+
+#schedules table tr td {
+  color: #fff;
+  padding: 35px;
+  font-size: 20px;
+}
+
+#schedules {
   max-width: 1440px;
   padding: 20px;
   margin: auto;
   text-align: center;
 }
 
-
-#schedules2 table {
+#schedules table {
   color: #fff;
   margin: 30px auto;
   line-height: 2.2;
-}
-
-#schedules table th,
-#schedules table td {
-  border: 1px solid #fff;
-  padding: 8px;
-}
-
-#schedules table tr {
-  color: #000;
-  font-weight: bold;
-  font-style: italic;
-}
-
-#schedules table tr th {
-  text-align: center;
-  margin: auto 20px;
-
-  background-color: #f2f2f2;
-  /* Fondo gris claro para las celdas de encabezado */
-  font-size: 22px;
-  /* Tamaño de fuente de 16px para los encabezados */
-
-}
-
-#schedules table tr td {
-  text-align: left;
-  color: #fff;
 }

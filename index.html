@@ -14,19 +14,24 @@
       <section id="info">
         <p>☎️ +54 353 441-2049 ☎️</p>
         <p>📍 Av. Naciones Unidas y Bruno Ceballos 📍</p>
+        <ul class="rrss">
+          <li><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png?w=360" alt="whatsapp"></li>
+          <li><img src="https://cdn.pixabay.com/photo/2021/06/15/12/14/instagram-6338392_1280.png" alt="instagram"></li>
+          <li><img src="https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_1280.png" alt="facebook"></li>
 
+        </ul>
       </section>
       <section id="navBar">
         <div id="logotype">
-          <img src="centralGym.png" class="logo" alt="logo">
+          <a href="index.html"><img src="centralGym.png" class="logo" alt="logo"></a>
         </div>
         <div id="bar">
           <ul>
-            <li>Inicio</li>
-            <li>Precios - Horarios</li>
-            <li>Galería</li>
-            <li>Sobre Nosotros</li>
-            <li>Contacto</li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#prices-schedules">Precios - Horarios</a></li>
+            <li><a href="galery.html">Galería</a></li>
+            <li><a href="contact.html/#about">Sobre Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
           </ul>
         </div>
       </section>
@@ -102,12 +107,12 @@
         </div>
       </section>
     </section>
-    <section id="schedules">
-      <div id="schedules2">
-        <h2 class="tittle">NUESTROS HORARIOS</h2>
+    <section id="prices-schedules">
+      <div id="schedules">
+        <h2 class="tittle">HORARIOS</h2>
         <table>
           <tr>
-            <th>ACTIVIDAD</th>
+            <th class="activity">ACTIVIDAD</th>
             <th>LUNES</th>
             <th>MARTES</th>
             <th>MIERCOLES</th>
@@ -116,7 +121,7 @@
             <th>SABADO</th>
           </tr>
           <tr>
-            <th>MUSCULACIÓN</th>
+            <th class="activity">MUSCULACIÓN</th>
             <td>07:00 - 22:00</td>
             <td>07:00 - 22:00</td>
             <td>07:00 - 22:00</td>
@@ -124,7 +129,7 @@
             <td>07:00 - 22:00</td>
             <td>10:00 - 14:00</td>
           </tr>
-          <tr>
+          <tr class="activity">
             <th>FUNCIONAL</th>
             <td>07:00 - 08:00<br>08:00 - 09:00<br>13:00 - 14:00<br>14:00 - 15:00<br>18:00 - 19:00<br>19:00 -
               20:00<br>20:00 - 21:00</td>
@@ -137,7 +142,30 @@
             <td>✘</td>
           </tr>
         </table>
+        <h2 class="tittle">PRECIOS</h2>
+        <table>
+          <tr>
+            <th class="activity">ACTIVIDAD</th>
+            <th>FRECUENCIA</th>
+            <th>PRECIO</th>
+          </tr>
+          <tr>
+            <th class="activity">MUSCULACIÓN</th>
+            <td>2 X Semana<br>Pase Libre</td>
+            <td>$7000<br>$8000</td>
+          </tr>
+          <tr class="activity">
+            <th>FUNCIONAL</th>
+            <td>2 X Semana<br>Pase Libre</td>
+            <td>$7000<br>$8000</td>
+          </tr>
+          <tr class="activity">
+            <th>PACK: MUSCULACIÓN<br>+ FUNCIONAL</th>
+            <td>Pase Libre</td>
+            <td>$9000</td>
 
+          </tr>
+        </table>
       </div>
 
     </section>
