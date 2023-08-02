@@ -479,6 +479,12 @@ main #services {
   transition: 0.4s;
 }
 
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+  color: #535353;
+  font-size: 19px;
+  font-style: italic;
+}
 
 #contactForm #nameSection label {
   margin-right: 20px;
@@ -487,3 +493,13 @@ main #services {
 #contactForm #nameSection> :nth-child(3) {
   margin-left: 20px;
 }
+
+/*
+#galery {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 500px 500px 500px;
+  margin: 20px auto;
+  border: solid 2px #fff;
+}
+*/
