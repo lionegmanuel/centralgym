@@ -1,20 +1,54 @@
+
+//envio del formulario
 const contactForm = document.getElementById('form')
 const sendButtonContactForm = document.querySelector('.sendButton')
-sendButtonContactForm.addEventListener('click', () => {
+sendButtonContactForm.addEventListener('click', (e) => {
+  e.preventDefault();
   //proceso de validaciones
   const name = document.getElementById('name').value
   const lastName = document.getElementById('lastName').value
   const email = document.getElementById('email').value
   const message = document.getElementById('message').value
-  if (name != null && name.lengh > 0 && name != ' ' && lastName != null && lastName.lengh > 0 && lastName != ' '
-    && email != null && email != ' ' && email.lengh>0 && email.includes('@') && message != '' && message != ' '
+
+  if (/^[a-zA-Z\s]{4,}$/.test(name) && /^[a-zA-Z\s]{4,}$/.test(lastName) && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email) && /^[a-zA-Z0-9.!$\s]{40,}/.test(message)
   ) {
     alert('¡Consulta enviada con éxito!')
+    document.getElementById('name').value = ''
+    document.getElementById('lastName').value = ''
+    document.getElementById('email').value=''
+    document.getElementById('message').value = ''
+    sendButtonContactForm.removeEventListener('click', e)
   } else { //cuando algunos de los campos no este correctamente completado
-    if (name === null || name.lengh <= 0 || name === ' ') console.log('Error en el campo de texto NOMBRE')
-    if (lastName === null || lastName.lengh <= 0 && lastName === ' ') console.log('Error en el campo de texto del APELLIDO')
-    if (email === null || email === ' ' || email.lengh <= 0 || !(email.includes('@'))) console.log('Error en el campo de texto del EMAIL')
-    else console.log('Error en el campo e texto del MENSAJE')
+    switch (name) {
+      case '':
+        alert('El campo nombre está vacío')
+        break
+      default:
+        if (!(/^[a-zA-Z\s]{4,}$/.test(name))) {
+          alert('Ingrese un nombre válido')
+        }
+    }
+    switch (lastName) { //en el apellido se permite que esté vacío
+      case '':
+        alert('El campo apellido está vacío')
+        break
+      default:
+        if (!(/^[a-zA-Z\s]{4,}$/.test(lastName))) {
+          alert('Ingrese un apellid válido')
+        }
+    }
+    switch (email) {
+      case '':
+        alert('El campo de email está vacío')
+        break
+      default: 
+        if (!(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))) alert('Email inválido. Por favor, ingrese un email válido')      
+    }
+    switch (message) {
+      default: 
+        if (!(/^[a-zA-Z0-9.!$\s]{40,}/.test(message))) alert('Ingrese una consulta válida') 
+    }
+    
   }
 })
 

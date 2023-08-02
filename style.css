@@ -274,7 +274,7 @@ header #header {
 
 main {
   background-color: #000;
-  height: 700px;
+  height: fit-content;
 }
 
 main #services {
@@ -322,6 +322,7 @@ main #services {
   background-color: #ff7f7f;
   height: fit-content;
   margin: auto auto 60px auto;
+  border-radius: 1em;
 }
 
 #about #aboutGym {
@@ -346,6 +347,7 @@ main #services {
   font-size: 25px;
   padding: 0 100px;
   text-align: justify;
+  margin-bottom: 30px;
 }
 
 #about #aboutGym .backgroundImage {
@@ -389,12 +391,6 @@ main #services {
 
 }
 
-#schedules table tr td {
-  color: #fff;
-  padding: 35px;
-  font-size: 20px;
-}
-
 #schedules {
   max-width: 1440px;
   padding: 20px;
@@ -402,11 +398,18 @@ main #services {
   text-align: center;
 }
 
+#schedules table tr td {
+  color: #fff;
+  padding: 35px;
+  font-size: 20px;
+}
+
 #schedules table {
   color: #fff;
   margin: 30px auto;
   line-height: 2.2;
 }
+
 
 /*formulario de contacto */
 #contactForm {
@@ -494,12 +497,41 @@ main #services {
   margin-left: 20px;
 }
 
-/*
+.galeryTittle {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0 auto 20px auto;
+}
+
 #galery {
   display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 500px 500px 500px;
-  margin: 20px auto;
-  border: solid 2px #fff;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  padding: 25px;
+  grid-row-gap: 120px;
+  margin-bottom: 40px;
 }
-*/
+
+#galery img {
+  margin: auto;
+  border-radius: 2em;
+}
+
+#galery img:hover {
+  transform: scale(1.05);
+  transition: 0.8s;
+}
+
+footer {
+  margin: 20px auto;
+  padding: 20px;
+}
+
+footer h4 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 15px;
+}
