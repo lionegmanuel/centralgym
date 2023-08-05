@@ -138,6 +138,7 @@ body {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ff7f7f;
+  transition: background-color 1s ease;
 }
 
 
@@ -251,11 +252,14 @@ header #header {
 
 .backgroundImage {
   display: inline-flex;
+  animation: opacityFadeIn 1.5s;
 }
+
 
 .backgroundImage img {
   height: 600px;
   border-radius: 5px;
+
 }
 
 
@@ -489,6 +493,11 @@ main #services {
   font-style: italic;
 }
 
+#contactForm input:hover::placeholder,
+#contactForm textarea:hover::placeholder {
+  color: #ff7f7f;
+}
+
 #contactForm #nameSection label {
   margin-right: 20px;
 }
@@ -517,6 +526,7 @@ main #services {
 #galery img {
   margin: auto;
   border-radius: 2em;
+  object-fit: fill;
 }
 
 #galery img:hover {
@@ -525,13 +535,28 @@ main #services {
 }
 
 footer {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto auto auto;
   margin: 20px auto;
   padding: 20px;
 }
 
-footer h4 {
+.footerCopy {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
   margin-bottom: 15px;
+  font-style: italic;
+}
+
+/*animation*/
+@keyframes opacityFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
