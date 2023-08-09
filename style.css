@@ -285,6 +285,7 @@ main #services {
   display: flex;
   flex-direction: row;
   text-align: center;
+  align-items: center;
 }
 
 #services .description {
@@ -300,7 +301,7 @@ main #services {
 
 #services .description .infoDescription {
   color: #fff;
-  margin: 20px 120px;
+  margin: 20px 5em;
   padding: 22px;
   border: 1px solid rgba(255, 127, 80, 0.5);
   border-radius: 40px;
@@ -558,5 +559,77 @@ footer {
 
   to {
     opacity: 1;
+  }
+}
+
+
+/*responsive design*/
+@media (max-width: 1440px) {
+  #background .backgroundImage img {
+    height: 450px;
+    width: auto;
+  }
+
+  #background .backgroundImage .tittle {
+    font-size: 30px;
+    margin: auto 30px;
+    text-align: left;
+  }
+
+  #about .backgroundImage img {
+    margin-right: 40px;
+
+  }
+
+  #schedules {
+    margin: auto 40px;
+  }
+
+  #prices-schedules table tr th {
+    font-size: 22px;
+  }
+
+  #schedules table tr td {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1280px) {
+  #bar ul li a {
+    font-size: 16px;
+  }
+
+  #about .tittle {
+    margin-left: 60px;
+  }
+
+  #about .infoDescription {
+    padding: 0 60px;
+    font-size: 22px;
+    text-align: left;
+
+  }
+
+
+}
+
+@media (max-width: 1150px) {
+  #background .backgroundImage {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #background .backgroundImage .tittle {
+    text-align: center;
+    margin: 40px 60px;
+  }
+
+  #services .description .tittle {
+    font-size: 35px;
+    margin: auto 15px;
+  }
+
+  #services .description .infoDescription {
+    margin: 20px 2em;
   }
 }
