@@ -218,7 +218,8 @@ header #header {
 }
 
 #bar {
-  width: 60%;
+  width: auto;
+  margin: auto 20px auto auto;
 }
 
 #bar ul {
@@ -517,17 +518,19 @@ main #services {
 
 #galery {
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-rows: repeat(3, auto);
   padding: 25px;
-  grid-row-gap: 120px;
+  gap: 40px 10px;
+  grid-auto-flow: dense;
   margin-bottom: 40px;
 }
 
 #galery img {
   margin: auto;
   border-radius: 2em;
-  object-fit: fill;
+  object-fit: cover;
+  width: 400px;
 }
 
 #galery img:hover {
@@ -592,6 +595,15 @@ footer {
   #schedules table tr td {
     padding: 20px;
   }
+
+  #galery {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px 10px;
+  }
+
+  #galery img {
+    width: 300px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -614,6 +626,11 @@ footer {
 }
 
 @media (max-width: 1150px) {
+  #logotype {
+    width: 20%;
+  }
+
+
   #background .backgroundImage {
     display: flex;
     flex-direction: column-reverse;
@@ -631,5 +648,55 @@ footer {
 
   #services .description .infoDescription {
     margin: 20px 2em;
+  }
+
+  #about #aboutGym .backgroundImage img {
+    width: 450px;
+  }
+
+  #schedules {
+    margin: auto 25px;
+  }
+
+  #prices-schedules table tr th {
+    font-size: 18px;
+  }
+
+  #schedules table tr td {
+    padding: 12px;
+  }
+
+  #contactForm form {
+    width: 80%;
+  }
+
+  #contactForm form #nameSection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: start;
+    align-items: start;
+  }
+
+  #contactForm form #nameSection>:nth-child(3) {
+    margin-left: 0;
+  }
+
+  #contactForm form #nameSection input {
+    width: -webkit-fill-available;
+  }
+}
+
+@media (max-width: 890px) {
+  #about {
+    position: relative;
+  }
+
+  #about #aboutGym .backgroundImage img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+
   }
 }
