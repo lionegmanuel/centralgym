@@ -370,52 +370,46 @@ main #services {
   background-color: #000;
 }
 
-#prices-schedules table th,
-#prices-schedules table td {
-  border: 2px solid #ff7f7f;
-  padding: 8px;
-  border-radius: 8px;
-  border-width: 2px;
-}
-
-#prices-schedules table tr {
-  color: #000;
-  font-weight: bold;
-  font-style: italic;
-}
-
-#prices-schedules table tr th:first-child {
-  text-align: left;
-  padding: 20px;
-}
-
-#prices-schedules table tr th {
-  text-align: center;
-  margin: auto 20px;
-  background-color: #ffe1e1;
-  font-size: 28px;
-
-}
-
 #schedules {
   max-width: 1440px;
   padding: 20px;
-  margin: auto;
+  margin: 10px auto;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  grid-template-rows: repeat(3, auto);
 }
 
-#schedules table tr td {
+#schedules .column {
+  border: 5px solid #fff;
+  border-radius: 12px;
+}
+
+#schedules .column .activity {
+  padding: 20px;
+  width: auto;
+}
+
+#schedules .column .activity h2 {
   color: #fff;
-  padding: 35px;
   font-size: 20px;
+  text-align: left;
+  margin: 0 auto auto 0;
 }
 
-#schedules table {
+#schedules .column .day h2 {
   color: #fff;
-  margin: 30px auto;
-  line-height: 2.2;
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+  border: 1px solid #fff;
 }
 
+#prices-schedules .tittle {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 /*formulario de contacto */
 #contactForm {
@@ -584,17 +578,6 @@ footer {
 
   }
 
-  #schedules {
-    margin: auto 40px;
-  }
-
-  #prices-schedules table tr th {
-    font-size: 22px;
-  }
-
-  #schedules table tr td {
-    padding: 20px;
-  }
 
   #galery {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -658,14 +641,6 @@ footer {
     margin: auto 25px;
   }
 
-  #prices-schedules table tr th {
-    font-size: 18px;
-  }
-
-  #schedules table tr td {
-    padding: 12px;
-  }
-
   #contactForm form {
     width: 80%;
   }
@@ -685,6 +660,14 @@ footer {
   #contactForm form #nameSection input {
     width: -webkit-fill-available;
   }
+
+  #galery {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  #galery img {
+    width: 250px;
+  }
 }
 
 @media (max-width: 890px) {
@@ -698,5 +681,13 @@ footer {
     right: 0;
     margin-top: 20px;
 
+  }
+
+  #galery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  #galery img {
+    width: 200px;
   }
 }
