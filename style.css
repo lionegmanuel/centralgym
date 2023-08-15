@@ -143,6 +143,7 @@ body {
 
 
 /*encabezado*/
+
 header {
   background-color: #000;
 }
@@ -406,6 +407,25 @@ main #services {
   border: 1px solid #fff;
 }
 
+#schedules .column .day .hours {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#schedules .column .day .hours h5:first-child {
+  margin: 40px auto 30px auto;
+}
+
+#schedules .column .day .hours h5:last-child {
+  margin: 20px auto;
+}
+
+#schedules .column .day .hours h5 {
+  color: #fff;
+  font-size: 18px;
+}
+
 #prices-schedules .tittle {
   text-align: center;
   margin-bottom: 20px;
@@ -508,6 +528,13 @@ main #services {
   font-size: 40px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin: 0 auto 20px auto;
+}
+
+a[href="#prices-schedules"],
+a[href="galery.html"],
+a[href="#about"],
+a[href="contact.html"] {
+  scroll-behavior: smooth;
 }
 
 #galery {
