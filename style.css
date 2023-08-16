@@ -391,6 +391,12 @@ main #services {
   width: auto;
 }
 
+
+
+#schedules .column .activity:last-child {
+  margin-top: 20px;
+}
+
 #schedules .column .activity h2 {
   color: #fff;
   font-size: 20px;
@@ -413,17 +419,25 @@ main #services {
   align-content: center;
 }
 
-#schedules .column .day .hours h5:first-child {
+#schedules .column .day .hours .muscle:first-child,
+#schedules .column .day .hours .funcional:first-child {
   margin: 40px auto 30px auto;
 }
 
-#schedules .column .day .hours h5:last-child {
-  margin: 20px auto;
+#schedules .column .day .hours .muscle:last-child,
+#schedules .column .day .hours .funcional:last-child {
+  margin-bottom: 20px;
 }
 
-#schedules .column .day .hours h5 {
+#schedules .column .day .hours .funcional,
+#schedules .column .day .hours .muscle {
   color: #fff;
   font-size: 18px;
+}
+
+#schedules .column .day .hours .muscle p,
+#schedules .column .day .hours .funcional p {
+  margin: 10px auto;
 }
 
 #prices-schedules .tittle {
@@ -664,8 +678,19 @@ footer {
     width: 450px;
   }
 
-  #schedules {
-    margin: auto 25px;
+  #schedules .column .activity {
+    padding: 20px 0;
+  }
+
+  #schedules .column .activity h2,
+  #schedules .column .day h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #schedules .column .day .hours .muscle p,
+  #schedules .column .day .hours .funcional p {
+    font-size: 15px;
   }
 
   #contactForm form {
@@ -716,5 +741,14 @@ footer {
 
   #galery img {
     width: 200px;
+  }
+
+  #schedules {
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  #schedules .column:first-child {
+    display: none;
   }
 }

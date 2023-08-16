@@ -1,3 +1,21 @@
+//horarios del gimnasio
+const muscleHours = document.querySelector('.muscle')
+const funcionalHours = document.querySelector('.funcional')
+
+const addHeaderHour = () => {
+  const newMuscleHeader = document.createElement('h3')
+  const newFuncionalHeader = document.createElement('h3')
+  newMuscleHeader.textContent = 'Musculación'
+  newFuncionalHeader.textContent = 'Funcional'
+  muscleHours.appendChild(newMuscleHeader)
+  funcionalHours.appendChild(newFuncionalHeader)
+}
+
+//a partir de 890px:
+if (window.matchMedia("(max-width: 890px)").matches) {
+  addHeaderHour()
+}
+
 
 //envio del formulario
 const contactForm = document.getElementById('form')
