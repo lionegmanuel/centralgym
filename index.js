@@ -1,14 +1,22 @@
 //horarios del gimnasio
-const muscleHours = document.querySelector('.muscle')
-const funcionalHours = document.querySelector('.funcional')
+const muscleHours = document.querySelectorAll('.muscle')
+const funcionalHours = document.querySelectorAll('.funcional')
 
 const addHeaderHour = () => {
-  const newMuscleHeader = document.createElement('h3')
-  const newFuncionalHeader = document.createElement('h3')
-  newMuscleHeader.textContent = 'Musculación'
-  newFuncionalHeader.textContent = 'Funcional'
-  muscleHours.appendChild(newMuscleHeader)
-  funcionalHours.appendChild(newFuncionalHeader)
+  //encabezados
+  let newMuscleHeader;
+  let newFuncionalHeader;
+  
+  muscleHours.forEach(curr => { //curr = div "muscle"
+    newMuscleHeader = document.createElement('h3')
+    newMuscleHeader.textContent = 'Musculación'
+    curr.insertBefore(newMuscleHeader, curr.firstChild)
+  });
+  funcionalHours.forEach(curr => { //curr = div "funcional")
+    newFuncionalHeader = document.createElement('h3')
+    newFuncionalHeader.textContent = 'Funcional'
+    curr.insertBefore(newFuncionalHeader, curr.firstChild)
+  });  
 }
 
 //a partir de 890px:
