@@ -1,12 +1,14 @@
 //horarios del gimnasio
 const muscleHours = document.querySelectorAll('.muscle')
 const funcionalHours = document.querySelectorAll('.funcional')
+const aboutGymContainer = document.getElementById('aboutGym')
+const descriptionAboutGym = aboutGymContainer.firstElementChild
 
 const addHeaderHour = () => {
   //encabezados
   let newMuscleHeader;
   let newFuncionalHeader;
-  
+
   muscleHours.forEach(curr => { //curr = div "muscle"
     newMuscleHeader = document.createElement('h3')
     newMuscleHeader.textContent = 'Musculación'
@@ -16,12 +18,22 @@ const addHeaderHour = () => {
     newFuncionalHeader = document.createElement('h3')
     newFuncionalHeader.textContent = 'Funcional'
     curr.insertBefore(newFuncionalHeader, curr.firstChild)
-  });  
+  });
+
+}
+
+const addTittleAboutGym = () => {
+  let removeTittle = descriptionAboutGym.querySelector('.tittle') //selecciona el titulo para eliminar
+  descriptionAboutGym.removeChild(removeTittle)
+  let newTittle = document.createElement('h2')
+  newTittle.textContent = 'CONOCÉNOS'
+  aboutGymContainer.insertBefore(newTittle, aboutGymContainer.firstChild)
 }
 
 //a partir de 890px:
 if (window.matchMedia("(max-width: 890px)").matches) {
   addHeaderHour()
+  addTittleAboutGym()
 }
 
 
@@ -41,7 +53,7 @@ sendButtonContactForm.addEventListener('click', (e) => {
     alert('¡Consulta enviada con éxito!')
     document.getElementById('name').value = ''
     document.getElementById('lastName').value = ''
-    document.getElementById('email').value=''
+    document.getElementById('email').value = ''
     document.getElementById('message').value = ''
     sendButtonContactForm.removeEventListener('click', e)
   } else { //cuando algunos de los campos no este correctamente completado
@@ -67,14 +79,14 @@ sendButtonContactForm.addEventListener('click', (e) => {
       case '':
         alert('El campo de email está vacío')
         break
-      default: 
-        if (!(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))) alert('Email inválido. Por favor, ingrese un email válido')      
+      default:
+        if (!(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email))) alert('Email inválido. Por favor, ingrese un email válido')
     }
     switch (message) {
-      default: 
-        if (!(/^[a-zA-Z0-9.!$\s]{40,}/.test(message))) alert('Ingrese una consulta válida') 
+      default:
+        if (!(/^[a-zA-Z0-9.!$\s]{40,}/.test(message))) alert('Ingrese una consulta válida')
     }
-    
+
   }
 })
 

@@ -712,6 +712,15 @@ footer {
     font-size: 15px;
   }
 
+  #about #aboutGym .backgroundImage {
+    margin-top: 10%;
+  }
+
+  #about #aboutGym .backgroundImage img {
+    width: 380px;
+    margin-right: 0.8em;
+  }
+
   #contactForm form {
     width: 80%;
   }
@@ -745,14 +754,27 @@ footer {
 
 
   #about #aboutGym {
-    overflow: hidden;
-    display: inline;
+    flex-direction: column;
+  }
+
+  #about #aboutGym:first-child {
+    color: #000;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 60px 50px 20px 100px;
+    text-align: left;
+    order: 1;
   }
 
   #about #aboutGym .backgroundImage {
     float: left;
     width: 50%;
     max-width: 50%;
+    order: 2;
+  }
+
+  #about #aboutGym .description .infoDescription {
+    order: 3;
   }
 
   #galery {
