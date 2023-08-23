@@ -137,8 +137,10 @@ html,
 body {
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ff7f7f;
+  background-color: #000;
   transition: background-color 1s ease;
+  min-width: 400px;
+  margin: auto;
 }
 
 
@@ -250,6 +252,7 @@ header #header {
   height: fit-content;
   text-align: center;
   margin-bottom: -5px;
+  background-color: #ff7f7f;
 }
 
 .backgroundImage {
@@ -258,7 +261,7 @@ header #header {
 }
 
 
-.backgroundImage img {
+.backgroundImage .backgroundImageContainer img {
   height: 600px;
   border-radius: 5px;
 
@@ -266,12 +269,10 @@ header #header {
 
 
 #background .backgroundImage .tittle {
-  width: auto;
-  margin: auto 50px;
-  justify-content: center;
-  text-align: justify;
+  margin: auto 35px;
+  text-align: end;
   line-height: 1.5;
-  font-size: 40px;
+  font-size: 30px;
   font-style: italic;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #000;
@@ -284,10 +285,12 @@ main {
 }
 
 main #services {
+  margin: auto;
   display: flex;
   flex-direction: row;
   text-align: center;
   align-items: center;
+  max-width: 1440px;
 }
 
 #services .description {
@@ -466,7 +469,6 @@ main #services {
 
 /*formulario de contacto */
 #contactForm {
-  max-width: 1440px;
   margin: 80px auto;
 }
 
@@ -495,6 +497,7 @@ main #services {
   font-weight: bold;
   font-style: italic;
   margin: 15px 0;
+  color: #ff7f7f;
 }
 
 #contactForm input {
@@ -593,6 +596,7 @@ a[href="contact.html"] {
 }
 
 footer {
+  background-color: #ff7f7f;
   display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: auto auto auto;
@@ -622,15 +626,21 @@ footer {
 
 /*responsive design*/
 @media (max-width: 1440px) {
-  #background .backgroundImage img {
-    height: 450px;
-    width: auto;
+  #background .backgroundImage .backgroundImageContainer {
+    width: 60%;
+  }
+
+  #background .backgroundImage .backgroundImageContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   #background .backgroundImage .tittle {
     font-size: 30px;
     margin: auto 30px;
     text-align: left;
+    width: 40%;
   }
 
   #about .backgroundImage img {
@@ -673,15 +683,27 @@ footer {
     width: 20%;
   }
 
-
   #background .backgroundImage {
     display: flex;
     flex-direction: column-reverse;
   }
 
+  #background .backgroundImage .backgroundImageContainer {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #background .backgroundImage .backgroundImageContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   #background .backgroundImage .tittle {
     text-align: center;
     margin: 40px 60px;
+    width: 100%;
   }
 
   #services .description .tittle {
@@ -757,24 +779,38 @@ footer {
     flex-direction: column;
   }
 
-  #about #aboutGym:first-child {
+  #about #aboutGym h2 {
     color: #000;
     font-size: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 60px 50px 20px 100px;
-    text-align: left;
+    margin: 40px auto;
+    text-align: center;
     order: 1;
   }
 
   #about #aboutGym .backgroundImage {
-    float: left;
-    width: 50%;
-    max-width: 50%;
     order: 2;
+    margin: auto;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #about #aboutGym .backgroundImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+
+  }
+
+  #about #aboutGym .description {
+    order: 3;
   }
 
   #about #aboutGym .description .infoDescription {
-    order: 3;
+    text-align: justify;
+    padding: 0 30px;
   }
 
   #galery {
@@ -800,6 +836,11 @@ footer {
     overflow-wrap: break-word;
     font-size: 17px;
     letter-spacing: normal;
+  }
+
+  #services .description .infoDescription p {
+    text-align: justify;
+    font-size: 17px;
   }
 }
 
@@ -841,6 +882,14 @@ footer {
     font-size: 18px;
   }
 
+  #services .description .infoDescription {
+    margin: 20px 0.8em;
+  }
+
+  #background .backgroundImage .tittle {
+    margin: 40px 25px;
+  }
+
 }
 
 
@@ -863,4 +912,40 @@ footer {
     text-align: center;
     margin: 0 10px 15px 10px;
   }
+
+  main #services {
+    flex-direction: column;
+  }
+
+  #services .description:first-child {
+    margin-bottom: 0;
+  }
+
+  #services .description .infoDescription {
+    margin: 20px 2em;
+  }
+
+  #background .backgroundImage .tittle {
+    font-size: 22px;
+  }
+
+  #schedules .column .activity h2,
+  #schedules .column .day h2 {
+    font-size: 20px;
+  }
+
+  #schedules .column .day .hours .muscle h3,
+  #schedules .column .day .hours .funcional h3 {
+    font-size: 19px;
+  }
+
+  #schedules .column .day .hours .muscle p,
+  #schedules .column .day .hours .funcional p {
+    font-size: 17.5px;
+  }
+
+  #bar ul li a {
+    font-size: 19.5px;
+  }
+
 }
