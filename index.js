@@ -164,7 +164,7 @@ sendButtonContactForm.addEventListener('click', (e) => {
     if (!showAlert) {
       switch (message) {
         default:
-          if (!(/^[a-zA-Z0-9.!$\s]{40,}/.test(message))) {
+          if (!(/^[a-zA-Z0-9.!$,¿?\s]{10,}/.test(message))) {
             alert('Ingrese una consulta válida')
             showAlert = true;
           }
