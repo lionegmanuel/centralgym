@@ -61,37 +61,76 @@ const funcionalHours = document.querySelectorAll('.funcional')
 const aboutGymContainer = document.getElementById('aboutGym')
 const descriptionAboutGym = aboutGymContainer ? aboutGymContainer.querySelector('.description') : null
 
-const addHeaderHour = () => {
+const addHeaderHour = bool => {
   //encabezados
-  let newMuscleHeader;
+  let newMuscleHeader; //agregar subtitulos
   let newFuncionalHeader;
+  let deleteMuscleHeader; //eliminar subtitulos agregados
+  let deleteFuncionalHeader;
+  if (bool) { //agregado de subtitulos
+    muscleHours.forEach(curr => { //curr = div "muscle"
+      newMuscleHeader = document.createElement('h3')
+      newMuscleHeader.textContent = 'Musculación'
+      newMuscleHeader.className = 'newMuscleSubtittle'
+      curr.insertBefore(newMuscleHeader, curr.firstChild)
+    });
+    funcionalHours.forEach(curr => { //curr = div "funcional")
+      newFuncionalHeader = document.createElement('h3')
+      newFuncionalHeader.textContent = 'Funcional'
+      newFuncionalHeader.className('newFuncionalSubtittle')
+      curr.insertBefore(newFuncionalHeader, curr.firstChild)
+    });
+  } else { //reversión al estado original
+    muscleHours.forEach(curr => {
+      deleteMuscleHeader = document.querySelector('.newMuscleSubtittle')
+      curr.removeChild(deleteMuscleHeader)
+    })
+    funcionalHours.forEach(curr => {
+      deleteFuncionalHeader = document.querySelector('.newFuncionalSubtittle')
+      curr.removeChild(deleteFuncionalHeader)
+    })
+  }
 
-  muscleHours.forEach(curr => { //curr = div "muscle"
-    newMuscleHeader = document.createElement('h3')
-    newMuscleHeader.textContent = 'Musculación'
-    curr.insertBefore(newMuscleHeader, curr.firstChild)
-  });
-  funcionalHours.forEach(curr => { //curr = div "funcional")
-    newFuncionalHeader = document.createElement('h3')
-    newFuncionalHeader.textContent = 'Funcional'
-    curr.insertBefore(newFuncionalHeader, curr.firstChild)
-  });
 
 }
 
-const addTittleAboutGym = () => {
-  let removeTittle = descriptionAboutGym.querySelector('.tittle') //selecciona el titulo para eliminar
-  descriptionAboutGym.removeChild(removeTittle)
-  let newTittle = document.createElement('h2')
-  newTittle.textContent = 'CONOCÉNOS'
-  aboutGymContainer.insertBefore(newTittle, aboutGymContainer.firstChild)
+const addTittleAboutGym = bool => {
+  let removeTittle; //titulo a remover
+  let originalTittle;
+  if (bool) { //cambios cuando la resolución < 890px
+    removeTittle = descriptionAboutGym.querySelector('.tittle') //selecciona el titulo para eliminar
+    descriptionAboutGym.removeChild(removeTittle)
+    let newTittle = document.createElement('h2')
+    newTittle.textContent = 'CONOCÉNOS'
+    newTittle.className = 'newTittle'
+    aboutGymContainer.insertBefore(newTittle, aboutGymContainer.firstChild)
+  }
+  else { //reversión al estado original inicial
+    removeTittle = aboutGymContainer.querySelector('.newTittle')
+    aboutGymContainer.removeChild(removeTittle)
+    originalTittle = document.createElement('h2')
+    originalTittle.textContent = 'CONOCÉNOS'
+    originalTittle.className = 'tittle'
+    descriptionAboutGym.insertBefore(originalTittle, descriptionAboutGym.firstChild)
+
+  }
+
 }
 
 //a partir de 890px:
-if (window.matchMedia("(max-width: 890px)").matches) {
-  addHeaderHour()
-  addTittleAboutGym()
-}
+const mq = matchMedia('(max-width: 890px')
+mq.addEventListener('change', () => {
+  if (mq.matches) {
+    console.log('Cambio en la resolución => 890px')
+    addHeaderHour(true)
+    addTittleAboutGym(true)
+  } else {
+    console.log('Resolución > 890px')
+    addHeaderHour(false)
+    addTittleAboutGym(false)
+  }
+})
+
 
 
 //envio del formulario => validaciones
